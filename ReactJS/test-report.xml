@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite id="0" name="/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/src/App.test.js" errors="0" package="/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/src/App.test.js" hostname="localhost" tests="5" failures="4" time="4.518" timestamp="2022-10-05T22:24:52">
+    <properties>
+    </properties>
+    <testcase classname="App component" name="routes check" time="0">
+    </testcase>
+    <testcase classname="App component" name="data map check" time="0">
+      <failure message="Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;WD&quot;
+Received: &quot;Node.js is used to create back-end services&quot;
+    at Object.&lt;anonymous&gt; (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/src/App.test.js:77:64)
+    at Object.asyncJestTest (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)" type="AssertionError">
+      </failure>
+    </testcase>
+    <testcase classname="App component" name="Add rating Check" time="0">
+      <failure message="Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+Expected: &quot;http://localhost:8001/courses/rating/5ff5706baf74d71378df935f&quot;, {&quot;body&quot;: &quot;{\&quot;rating\&quot;:1}&quot;, &quot;headers&quot;: {&quot;Content-Type&quot;: &quot;application/json&quot;}, &quot;method&quot;: &quot;PATCH&quot;}
+Received
+       1: &quot;http://localhost:8001/courses/get&quot;
+       2
+          &quot;http://localhost:8001/courses/rating/5ff5706baf74d71378df935f&quot;,
+          Object {
+            &quot;body&quot;: &quot;{\&quot;rating\&quot;:1}&quot;,
+        -   &quot;headers&quot;: Object {
+        -     &quot;Content-Type&quot;: &quot;application/json&quot;,
+        -   },
+            &quot;method&quot;: &quot;PATCH&quot;,
+          },
+       3
+          &quot;http://localhost:8001/courses/rating/undefined&quot;,
+          Object {
+        -   &quot;body&quot;: &quot;{\&quot;rating\&quot;:1}&quot;,
+        -   &quot;headers&quot;: Object {
+        -     &quot;Content-Type&quot;: &quot;application/json&quot;,
+        -   },
+        +   &quot;body&quot;: &quot;{\&quot;rating\&quot;:5}&quot;,
+            &quot;method&quot;: &quot;PATCH&quot;,
+          },
+
+Number of calls: 3
+    at Object.&lt;anonymous&gt; (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/src/App.test.js:118:26)
+    at Object.asyncJestTest (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)" type="AssertionError">
+      </failure>
+    </testcase>
+    <testcase classname="App component" name="Apply check" time="0">
+      <failure message="Error: Method “simulate” is meant to be run on 1 node. 0 found instead.
+    at ShallowWrapper.single (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/enzyme/src/ShallowWrapper.js:1652:13)
+    at ShallowWrapper.simulate (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/enzyme/src/ShallowWrapper.js:1133:17)
+    at Object.&lt;anonymous&gt; (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/src/App.test.js:145:11)
+    at Object.asyncJestTest (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)" type="AssertionError">
+      </failure>
+    </testcase>
+    <testcase classname="App component" name="drop rating Check" time="0">
+      <failure message="Error: Method “simulate” is meant to be run on 1 node. 0 found instead.
+    at ShallowWrapper.single (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/enzyme/src/ShallowWrapper.js:1652:13)
+    at ShallowWrapper.simulate (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/enzyme/src/ShallowWrapper.js:1133:17)
+    at Object.&lt;anonymous&gt; (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/src/App.test.js:179:15)
+    at Object.asyncJestTest (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/lalo/Documents/proyecto-js/learning-app/learning-app/ReactJS/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)" type="AssertionError">
+      </failure>
+    </testcase>
+    <system-out/>
+    <system-err/>
+  </testsuite>
+</testsuites>
