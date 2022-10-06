@@ -18,18 +18,14 @@ class Home extends Component {
     const courses = await fetch("http://localhost:8001/courses/get")
           .then(response => response.json())
 
-      console.log(courses)
     this.setState({ data: courses })
   }
 
   handleApply = async (id) => {
     // Write your code here
-      const course = await fetch("http://localhost:8001/courses/enroll/" + id, {
+      await fetch("http://localhost:8001/courses/enroll/" + id, {
           method: "POST"
       })
-      .then(response => response.json())
-      console.log(course)
-      this.handleGetData()
   };
 
   handleRating = (e) => {
@@ -39,26 +35,20 @@ class Home extends Component {
 
   handleAddRating = async (id) => {
     // Write your code here
-      const course = await fetch("http://localhost:8001/courses/rating/" + id, {
+      await fetch("http://localhost:8001/courses/rating/" + id, {
           method: "PATCH",
           body: JSON.stringify({
               rating: this.state.rating
-          })
+          }),
+          headers: JSON.stringify({ "Content-Type": "application/json" })
       })
-      .then(response => response.json())
-      console.log(course)
-      this.handleGetData()
-    
   }
 
   handleDrop = async (id) => {
     // Write your code here
-      const course = await fetch("http://localhost:8001/courses/drop/" + id, {
+      await fetch("http://localhost:8001/courses/drop/" + id, {
           method: "DELETE"
       })
-      .then(response => response.json())
-      console.log(course)
-      this.handleGetData()
   }
 
   render() {
@@ -74,9 +64,10 @@ class Home extends Component {
                     <ul>
                         <div className="header">
                         <li>{course.courseName}</li>
+                        <li>{course.courseDept}</li>
                         <li>{course.description}</li>
-                            <li>{course.isApplied ? "True" : "False"}</li>                        
-                        <div>
+                                               
+                        <li>
                         <li>Rate: 
                             <select className="rating" name="rating" 
                                 onChange={this.handleRating}
@@ -93,11 +84,11 @@ class Home extends Component {
                             >Add</button>
                         </li>
                             <button className="drop" onClick={() => this.handleDrop(course._id)}>Drop Course</button>
-                        </div>
-                            <li><button className="btn" onClick={() => this.handleApply(course._id)}>Apply</button></li>
-                        </div>
+                            <button className="btn" onClick={() => this.handleApply(course._id)}>Apply</button>
+                        </li> 
                         <div className="footer">
-                        <li></li>
+                        <li>{course.duration} hrs . {course.noOfRatings} Ratings . {course.rating}/5</li>
+                        </div>
                         </div>
                     </ul>
                     </div>
